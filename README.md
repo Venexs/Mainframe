@@ -1,40 +1,89 @@
-# Mainframe - A Fun Side Project
+# Mainframe
 
-This started of as a school project but now, Its a side project I keep updating every week or so, Any new skills I learn, I implement it here to show my growth.
+A command-line collaboration and group-management system built with Python.
+
+Mainframe started as a school project and gradually developed into a larger personal project. It explores how a centralised workspace could handle multiple users, groups, shared files, communication and project organisation through a terminal-based interface.
+
+## Features
+
+- **User Accounts** — Sign-up, login, account profiles and user settings.
+- **Groups** — Create and manage groups, assign administrative roles, invite members and organise shared workspaces.
+- **File Management** — Create folders and organise files within group workspaces.
+- **Mail System** — Send and receive messages through an internal inbox and outbox.
+- **Contracts** — Create and manage group-related contracts.
+- **Project Timeline** — Visualise and organise project schedules and assigned work.
+- **User Profiles** — Maintain user information and account preferences.
+- **Access Control** — Different permissions for group owners, administrators and members.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install these modules.
-
-Tkinter
-
-```bash
-pip install tk
-```
-Colorama
+Mainframe requires Python and Colorama.
 
 ```bash
 pip install colorama
 ```
 
-Other Modules are part of the standard library
+Tkinter is also required for file-dialog functionality. It is included with most standard Python installations.
 
 ## Usage
 
-Run the main.bat file in the main folder to start the program.
+Clone the repository:
 
-Once Login/Sign up is completed, Enter '?' or 'Help' to see the list of commands to use
+```bash
+git clone https://github.com/Venexs/Mainframe.git
+cd Mainframe
+```
 
+Run the program:
 
-## Contributing
+```bash
+python main.py
+```
 
-To Pull requests, please open an issue first
-to discuss what you would like to change.
+On Windows, you can alternatively launch `Main.bat`.
 
-Please make sure that any new line of code works with all of the appropriate functions
+After starting the program, log in or create an account. Enter `?` or `Help` to view the available commands.
 
-I would also love any suggestions to the program
+## Project Structure
 
-## License
+```text
+Mainframe/
+│
+├── main.py
+├── test.py
+├── Main.bat
+├── format.txt
+│
+├── Client/
+│   ├── Files/
+│   │   ├── Logins/
+│   │   ├── Userpref/
+│   │   └── Ver_control.csv
+│   └── PerLog/
+│
+├── Server/
+│   ├── Main Files/
+│   │   ├── userdata.csv
+│   │   └── Ver_control.csv
+│   ├── Open Files/
+│   └── Mainframe.csv
+│
+└── README.md
+```
 
-[CC](https://github.com/santisoler/cc-licenses)
+## Technical Details
+
+| Component | Technology |
+|---|---|
+| Language | Python |
+| Interface | Command-line |
+| Terminal styling | Colorama |
+| Data storage | CSV and Pickle |
+| File selection | Tkinter |
+| File operations | Python standard library |
+
+## Development
+
+Mainframe is an ongoing personal project. New features and improvements are added as I learn and experiment with different programming concepts.
+
+Contributions and suggestions are welcome. For larger changes, please open an issue before submitting a pull request.
