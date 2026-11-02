@@ -1,40 +1,62 @@
-# Mainframe - A Fun Side Project
+# Mainframe
 
-This started of as a school project but now, Its a side project I keep updating every week or so, Any new skills I learn, I implement it here to show my growth.
+A Python-based terminal application built around the idea of having your own workspace. Users can create Mainframes, organise folders, manage access, and communicate through an internal mail system.
+
+This started as a school project and gradually became a side project where I experiment with things I've learned along the way.
+
+## Features
+
+- **User Accounts** — Sign up and log in with a user account.
+- **Mainframes** — Create and manage separate workspaces, each with its own name, description, and colour theme.
+- **Folder Management** — Create folders and organise files within a Mainframe.
+- **Access Levels** — Mainframe members can be assigned different roles, including Normal, Manager, and Admin.
+- **Internal Mail** — Send and receive messages, including Mainframe invitations.
+- **User Settings** — Change account settings and configure the main data folder.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install these modules.
+You'll need Python installed on Windows.
 
-Tkinter
-
-```bash
-pip install tk
-```
-Colorama
+Install the required packages:
 
 ```bash
-pip install colorama
+pip install colorama pillow
 ```
 
-Other Modules are part of the standard library
+Tkinter is also required for file selection. It is included with most standard Windows Python installations.
 
 ## Usage
 
-Run the main.bat file in the main folder to start the program.
+Clone or download the repository, then run:
 
-Once Login/Sign up is completed, Enter '?' or 'Help' to see the list of commands to use
+```bash
+python main.py
+```
 
+Alternatively, run `Mainframe.bat` from the project folder.
 
-## Contributing
+After starting the program, sign up or log in. You can use the available menu options to navigate through the application.
 
-To Pull requests, please open an issue first
-to discuss what you would like to change.
+## Project Structure
 
-Please make sure that any new line of code works with all of the appropriate functions
+```text
+Mainframe/
+├── Files/
+├── Mainframes/
+├── main.py
+├── MainframeTemplate.py
+├── Mainframe.bat
+└── Icon.ico
+```
 
-I would also love any suggestions to the program
+- `main.py` handles account access and the Mainframe selection screen.
+- `MainframeTemplate.py` contains the workspace, folder, mail, and settings functions.
+- `Files/` stores account and application data.
+- `Mainframes/` stores workspace information and folders.
 
-## License
+## Notes
 
-[CC](https://github.com/santisoler/cc-licenses)
+This is an ongoing personal project. Some features may be incomplete or have bugs, and the code is still being developed.
+
+The application currently uses local files for its data storage. It is not a networked client-server application.
+
